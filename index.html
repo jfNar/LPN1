@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Защита экологии</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9; /* Светлый зеленый фон */
+            color: #333; /* Тёмный текст */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            color: #2d7a8e; /* Цвет заголовка */
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+            border-bottom: 3px solid #8bc34a; /* Зелёная линия под заголовком */
+            padding-bottom: 10px;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around; 
+            background-color: #4caf50; /* Зеленый цвет меню */
+            border-radius: 10px;
+            padding: 5px; /* Уменьшенное значение для большей компактности */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 800px; /* Ограничение максимальной ширины */
+            margin: 20px 0;
+        }
+        .menu button {
+            background-color: #ffffff; /* Белые кнопки */
+            color: #4caf50; /* Зеленый текст */
+            border: none;
+            padding: 10px; /* Уменьшенные отступы для компактности */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 14px; /* Уменьшенный шрифт */
+            flex-grow: 1; /* Кнопки занимают равные объёмы */
+            margin: 0 5px; /* Отступ между кнопками */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .menu button:hover {
+            background-color: #2d7a8e; /* Темнее при наведении */
+            color: white; /* Белый текст при наведении */
+        }
+        .content {
+            margin-top: 20px;
+            border: 2px solid #4caf50; /* Зеленая рамка */
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ffffff; /* Белый фон для контента */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: none;
+            width: 100%;
+            max-width: 800px; /* Ограничение максимальной ширины контента */
+        }
+        .content.active {
+            display: block;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        ul {
+            list-style-type: square; /* Квадратные маркеры */
+            padding-left: 20px; /* Отступ для маркеров */
+        }
+        /* Визуальные эффекты */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на сайт о защите экологии!</h1>
+
+    <div class="menu">
+        <button onclick="showPage('home')">Домой</button>
+        <button onclick="showPage('importance')">Зачем это нужно</button>
+        <button onclick="showPage('tips')">Советы</button>
+        <button onclick="showPage('initiatives')">Инициативы</button>
+        <button onclick="showPage('facts')">Факты</button>
+        <button onclick="showPage('reuse')">Повторное использование</button>
+        <button onclick="showPage('game')">Игра</button>
+    </div>
+
+    <div id="home" class="content active">
+        <h2>Что такое защита экологии?</h2>
+        <p>Защита экологии включает в себя меры, направленные на охрану природных ресурсов и экосистем. Это важный аспект, который способствует выживанию человечества и сохранению планеты для будущих поколений.</p>
+        <img src="https://images.unsplash.com/photo-1515838132028-0b36c7f2b3e9" alt="Природа и экосистема">
+    </div>
+
+    <div id="importance" class="content">
+        <h2>Почему это важно?</h2>
+        <p>Защита экологии важна для обеспечения устойчивого существования человечества. Чистая вода, воздух и ресурсы — это основа здоровья человека. Охрана окружающей среды помогает сохранить биоразнообразие и поддерживать экосистемы.</p>
+        <ul>
+            <li>Устойчивое развитие насаждает основы для будущего.</li>
+            <li>Охрана животных и растений помогает сохранить биологическое разнообразие.</li>
+            <li>Чистая экология способствует здоровью и благополучию людей.</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Земля">
+    </div>
+
+    <div id="tips" class="content">
+        <h2>Советы по защите экологии</h2>
+        <p>Вот несколько простых способов, как вы можете помочь окружающей среде:</p>
+        <ul>
+            <li>Сокращайте использование пластика: используйте многоразовые сумки.</li>
+            <li>Экономьте воду: установите насадки на краны и душевые лейки.</li>
+            <li>Поддерживайте локальные продукты: покупайте у местных фермеров.</li>
+            <li>Используйте общественный транспорт или велосипеды вместо автомобилей.</li>
+            <li>Участвуйте в волонтерских акциях по очистке природы.</li>
+            <li>Выключайте свет, когда выходите из комнаты, и используйте энергоэффективные лампы.</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Переработка">
+    </div>
+
+    <div id="initiatives" class="content">
+        <h2>Успешные инициативы по охране окружающей среды</h2>
+        <p>Вот несколько примеров успешных инициатив:</p>
+        <ul>
+            <li><strong>Зеленая инициатива:</strong> восстановление лесов в России, включающее высадку деревьев и очистку территорий.</li>
+            <li><strong>Заповедники:</strong> создание охраняемых территорий для защиты биоразнообразия.</li>
+            <li><strong>Кампании по сокращению отходов:</strong> программы по уменьшению пластиковых отходов через занятия и инициативы в школьных кругах.</li>
+            <li><strong>Экотуризм:</strong> улучшение осведомленности о природе и её охране через туры и активные мероприятия на свежем воздухе.</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1535910824590-1ee1e4065b48" alt="Инициативы по экологии">
+    </div>
+
+    <div id="facts" class="content">
+        <h2>Интересные факты об экологии</h2>
+        <ul>
+            <li>В России находится около 25% мировых запасов лесов, что делает её одной из самых лесистых стран в мире.</li>
+            <li>Каждый год в мире теряется около 13 миллионов гектаров леса, что эквивалентно размерам Португалии.</li>
+            <li>Одно дерево может поглотить до 48 фунтов углекислого газа в течение одного года.</li>
+            <li>75% водоемов в мире считаются загрязненными, что представляет собой серьезную проблему для здоровья населения.</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1555685818-4b5d2a32c5d2" alt="Интересные факты об экологии">
+    </div>
+
+    <div id="reuse" class="content">
+        <h2>Повторное использование и переработка</h2>
+        <p>Повторное использование вещей помогает свести к минимуму отходы и защитить природу. Вот несколько идей:</p>
+        <ul>
+            <li>Используйте остатки пищи для компоста, чтобы создать натуральное удобрение.</li>
+            <li>Давайте старую одежду на благотворительность или обмен, устраивая "обменник" со знакомыми.</li>
+            <li>Создавайте новые предметы из старых: например, сами делайте мебель из деревянных паллет или украшения из ненужных вещей.</li>
+            <li>Покупайте вторичные товары: одежду и аксессуары из магазинов секонд-хенд.</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1481693124580-56676e2aa356" alt="Повторное использование">
+    </div>
+
+    <div id="game" class="content">
+        <h2>Мини-игра: Сортировка мусора</h2>
+        <div class="recycling-game">
+            <p>Перетащите мусор в правильные контейнеры для переработки!</p>
+            <div class="item-container" id="items">
+                <div class="item" draggable="true" ondragstart="drag(event)" id="paper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Paper_icon.svg/805px-Paper_icon.svg.png" alt="Бумага">
+                </div>
+                <div class="item" draggable="true" ondragstart="drag(event)" id="plastic">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Plastic_icon.svg/1024px-Plastic_icon.svg.png" alt="Пластик">
+                </div>
+                <div class="item" draggable="true" ondragstart="drag(event)" id="glass">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Glass_icon.svg/1024px-Glass_icon.svg.png" alt="Стекло">
+                </div>
+                <div class="item" draggable="true" ondragstart="drag(event)" id="food">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Food_icon.svg/512px-Food_icon.svg.png" alt="Пища">
+                </div>
+                <div class="item" draggable="true" ondragstart="drag(event)" id="electronics">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Electronics_icon.svg/512px-Electronics_icon.svg.png" alt="Электроника">
+                </div>
+            </div>
+
+            <div class="bins">
+                <div class="bin" id="bin-paper" ondrop="drop(event, 'paper')" ondragover="allowDrop(event)">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Paper_bin_icon.svg/1024px-Paper_bin_icon.svg.png" alt="Контейнер для бумаги">
+                    <p>Бумага</p>
+                </div>
+                <div class="bin" id="bin-plastic" ondrop="drop(event, 'plastic')" ondragover="allowDrop(event)">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Plastic_bin_icon.svg/1024px-Plastic_bin_icon.svg.png" alt="Контейнер для пластика">
+                    <p>Пластик</p>
+                </div>
+                <div class="bin" id="bin-glass" ondrop="drop(event, 'glass')" ondragover="allowDrop(event)">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Glass_bin_icon.svg/1024px-Glass_bin_icon.svg.png" alt="Контейнер для стекла">
+                    <p>Стекло</p>
+                </div>
+                <div class="bin" id="bin-food" ondrop="drop(event, 'food')" ondragover="allowDrop(event)">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Food_waste_bin_icon.svg/1024px-Food_waste_bin_icon.svg.png" alt="Контейнер для пищевых отходов">
+                    <p>Еда</p>
+                </div>
+                <div class="bin" id="bin-electronics" ondrop="drop(event, 'electronics')" ondragover="allowDrop(event)">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Electronics_bin_icon.svg/1024px-Electronics_bin_icon.svg.png" alt="Контейнер для электроники">
+                    <p>Электроника</p>
+                </div>
+            </div>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        let isTransitioning = false;
+
+        function showPage(pageId) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            const currentPage = document.querySelector('.content.active');
+            const nextPage = document.getElementById(pageId);
+
+            if (currentPage !== nextPage) {
+                currentPage.classList.add('fade-out');
+
+                setTimeout(() => {
+                    currentPage.classList.remove('active', 'fade-out');
+                    nextPage.classList.add('fade-in');
+
+                    setTimeout(() => {
+                        nextPage.classList.add('active');
+                        nextPage.classList.remove('fade-in');
+                        isTransitioning = false;
+                    }, 500);
+                }, 500);
+            } else {
+                isTransitioning = false;
+            }
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event, expectedItem) {
+            event.preventDefault();
+            const data = event.dataTransfer.getData("text");
+            const itemType = data; // Здесь мы можем использовать данные из dragged элемента
+
+            // Проверяем верность ответа
+            if (itemType === expectedItem) {
+                document.getElementById("message").innerText = `Правильно! Вы выбросили ${itemType} в правильный контейнер.`;
+                document.getElementById(data).classList.add("correct");
+            } else {
+                document.getElementById("message").innerText = `Неправильно! ${itemType} нужно выбросить в другой контейнер.`;
+                document.getElementById(data).classList.add("incorrect");
+            }
+            // Удаляем элемент из списка
+            document.getElementById(data).remove();
+        }
+    </script>
+</body>
+</html>
